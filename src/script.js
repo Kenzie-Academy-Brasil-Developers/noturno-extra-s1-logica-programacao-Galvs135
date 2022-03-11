@@ -1,13 +1,20 @@
-function calculateSalary()
+function calculateSalary(salario,valorTotal)
 {
-    
+    if(valorTotal > 1200)
+    {
+        let valorSup = valorTotal - 1200
+        let valorAtual = (valorSup /100)*5
+
+        return salario+valorAtual+((1200/100)*3)
+    }else{
+        return salario+((valorTotal/100)*3)
+    }
 }
 
 
 function calculateStock(qtdAtual,qtdMax,qtdMin)
 {
     let qtdMedia = (qtdMax+qtdMin)/2
-    
     if(qtdMedia <= qtdAtual){
         return "Não efetuar compra"
     }
